@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Stage wise tasks counter ",
+    'name': "Stage wise tasks counter in project kanban view ",
 
     'summary': """
        This odoo app helps to show number of tasks in each stage in project kanban view.""",
