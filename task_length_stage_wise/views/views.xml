@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="custom_view_project_kanban_inherited" model="ir.ui.view">
+            <field name="name">project.project.timesheet.kanban.inherited</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_kanban"/>
+            <field name="priority">24</field>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="stage_wise_task" invisible="1"/>
+                </field>
+                <xpath expr="//div[hasclass('o_project_kanban_boxes')]" position="after">
+                    <div class="text-left">
+                        <br/>
+                        <span class="o_value">
+                            <t t-raw="record.stage_wise_task.value"/>
+                        </span>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
